@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ArteIA Prompt Forge",
+  "version": "1.0",
+  "description": "Forja prompts con ArteIA directamente desde cualquier textarea.",
+  "permissions": ["scripting", "activeTab", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "ArteIA Forge"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+  {
+    "resources": [
+      "xt/ui.css",
+      "xt/ui.html",
+      "xt/media/arteia-iso.svg",
+      "xt/forge-core.js",
+      "xt/popup.html" 
+    ],
+    "matches": ["<all_urls>"]
+  }
+],
+  "icons": {
+    "128": "xt/media/arteia-iso-128.png"
+  }
+}
