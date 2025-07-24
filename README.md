@@ -4,7 +4,7 @@
 
 # 🔥 ArteIA Prompt Forge
 
-**Transforma cualquier descripción de imagen en prompts optimizados para modelos de IA como Stable Diffusion.**
+**Transforma cualquier descripción de imagen en prompts optimizados para modelos de IA como Stable Diffusion.**<br>
 Desarrollado con Cloudflare Workers, Llama 3 y una interfaz simple para testeo rápido.  
 Este repositorio contiene el núcleo del sistema: el backend y el frontend de pruebas
 
