@@ -71,6 +71,13 @@ Additionally:
 
 ---
 
+## 📸 How it works
+<div align="center">
+  <img src="./assets/screen-1.png" alt="How it works" width="100%">
+</div>
+
+---
+
 ## 🧩 Chrome Extension
 
 Includes a floating interface on any `textarea`.  
