@@ -6,7 +6,7 @@
 
 **Turn any image description into optimized prompts for AI models like Stable Diffusion.**  
 Built with Cloudflare Workers, Llama 3, and a simple interface for fast testing.  
-This repository contains the system core: the backend (`forge/`) and the testing frontend (`web/`).
+This repository contains the system core: the backend and the testing frontend.
 
 ---
 
