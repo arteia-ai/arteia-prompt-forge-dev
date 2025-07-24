@@ -47,7 +47,7 @@ deformed face, extra limbs, blurry eyes, watermark
 Additionally:
 - You can regenerate the last prompt by pressing `Shift + click` on the forge button.
 - You can also insert the last generated *negative prompt*.
-- You can generate text in your language and the extension will take care of translating it.
+- You can generate text in any language and the extension will take care of translating it.
 
 ---
 
