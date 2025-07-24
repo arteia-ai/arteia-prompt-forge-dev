@@ -6,8 +6,7 @@
 
 **Transforma cualquier descripción de imagen en prompts optimizados para modelos de IA como Stable Diffusion.**  
 Desarrollado con Cloudflare Workers, Llama 3 y una interfaz simple para testeo rápido.  
-Este repositorio contiene el núcleo del sistema: el backend (`forge/`) y el frontend de pruebas (`web/`).
-
+Este repositorio contiene el núcleo del sistema: el backend y el frontend de pruebas
 ---
 
 ## ⚠️ IMPORTANTE: necesitas tu propio Worker
