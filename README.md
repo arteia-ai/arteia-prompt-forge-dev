@@ -47,6 +47,7 @@ deformed face, extra limbs, blurry eyes, watermark
 Además:
 - Puedes regenerar el último prompt pulsando `Shift + clic` en el botón de forjar.
 - También puedes insertar el último *prompt negativo* generado.
+- Puedes generar texto en tu idioma y la extensión se encargará de traducirlo.
 
 ---
 
