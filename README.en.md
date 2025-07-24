@@ -1,4 +1,3 @@
-
 <div align="center">
   <img src="./assets/banner_github.jpg" alt="ArteIA Prompt Forge banner" width="100%">
 </div>
@@ -6,16 +5,32 @@
 # 🔥 ArteIA Prompt Forge
 
 **Turn any image description into optimized prompts for AI models like Stable Diffusion.**  
-Powered by Cloudflare Workers, Llama 3, and a minimal frontend for fast testing.  
-This repository contains the project core: the backend (`forge/`) and a testing interface (`web/`).
+Built with Cloudflare Workers, Llama 3, and a simple interface for fast testing.  
+This repository contains the system core: the backend (`forge/`) and the testing frontend (`web/`).
+
+---
+
+## ⚠️ IMPORTANT: You need your own Worker
+
+This version of the project **does not include the official API**.  
+To make it work properly, you must deploy your own Worker on Cloudflare by following the instructions below.
+
+You also need to configure the file `xt/forge-core.js` and replace:
+
+```js
+const apiURL = "YOUR_API_URL";  // ← e.g. https://your-name.username.workers.dev
+const apiKey = "YOUR_API_KEY";  // ← If your API requires a custom key
+```
+
+> If you skip this step, the extension will throw an error when generating prompts.
 
 ---
 
 ## ⚙️ What does it do?
 
-Give it an input like:
+You enter something like:
 
-> _"A glowing warrior woman with magical tattoos in an enchanted forest, fantasy illustration, medium shot"_
+> _"A warrior woman with glowing tattoos in an enchanted forest, fantasy illustration, medium shot"_
 
 And it returns a prompt like:
 
@@ -23,84 +38,58 @@ And it returns a prompt like:
 a glowing tattooed warrior woman, fantasy illustration style, 8k, high quality, masterpiece, in an enchanted forest with magical light, walking through the foliage, cinematic medium shot
 ```
 
-Plus its matching **negative prompt**, automatically generated based on the subject type:
+Along with the automatically generated **negative prompt**:
 
 ```
 deformed face, extra limbs, blurry eyes, watermark
 ```
 
----
-
-## 🧠 Tech stack
-
-| Area | Stack |
-|------|-------|
-| Worker | [Cloudflare Workers](https://developers.cloudflare.com/workers/) |
-| AI | [Llama-3-8B Instruct](https://developers.cloudflare.com/workers-ai/models/meta/llama-3-8b-instruct) |
-| Frontend test | HTML + Vanilla JS |
-| Tooling | Wrangler 3/4, TypeScript |
+Additionally:
+- You can regenerate the last prompt by pressing `Shift + click` on the forge button.
+- You can also insert the last generated *negative prompt*.
+- You can generate text in your language and the extension will take care of translating it.
 
 ---
 
-## 📁 Project structure
+## 🧠 Technologies used
 
-```
-arteia-prompt-forge/
-├── forge/         # Cloudflare Worker (backend)
-│   ├── src/index.ts
-│   ├── wrangler.jsonc
-│   └── ...
-├── web/           # Simple web test UI
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
-├── assets/
-│   └── banner_github.jpg
-├── .env.example   # Required variables for local dev
-├── .gitignore
-└── README.md
-```
-
----
-
-## 🚀 How to run it locally (for developers only)
-
-1. Clone the repo and enter the `forge/` folder
-2. Create a `.env` file with your credentials (based on `.env.example`)
-3. Install dependencies and launch the worker locally:
-
-```bash
-npm install
-npx wrangler dev
-```
-
-4. Open `web/index.html` in your browser and start forging.
-
----
-
-## ☁️ Production endpoint
-
-This project is live via Cloudflare Workers:  
-👉 [`https://prompt-forge-worker.arteia2808.workers.dev`](https://prompt-forge-worker.arteia2808.workers.dev)
-
-Public access is protected by a secret key (`X-Arteia-Key`). The key is used by the web test UI and the upcoming browser extension.
+| Area          | Stack                                                                 |
+|---------------|-----------------------------------------------------------------------|
+| Worker        | [Cloudflare Workers](https://developers.cloudflare.com/workers/)     |
+| AI            | [Llama-3-8B Instruct](https://developers.cloudflare.com/workers-ai/models/meta/llama-3-8b-instruct) |
+| Frontend test | HTML + Vanilla JavaScript                                             |
+| Chrome Extension | Manifest V3 + floating UI                                         |
+| Tooling       | Wrangler 3/4, TypeScript                                              |
 
 ---
 
 ## 🛡 Security
 
-This repo **does not include any real API keys**.  
-Secrets are stored in `wrangler.jsonc` or environment variables, and request authentication is enforced.
+- This repo **does not include real keys or working endpoints by default**.
+- Sensitive variables are isolated in `.env` and `wrangler.jsonc`.
+- You can implement extra validation in your Worker (like extension ID protection or integrity verification).
+
+---
+
+## 🧩 Chrome Extension
+
+Includes a floating interface on any `textarea`.  
+You just need to:
+- Activate the extension (by clicking its icon).
+- Click the floating logo next to a field.
+- Forge your prompt with a single click.
+
+🎨 You can visually customize the extension from the files in `xt/`.
 
 ---
 
 ## ☕ Credits & Support
 
-This project is part of the [ArteIA](https://youtube.com/@arteia) universe, created for artists, makers and curious minds who love the fusion of creativity and technology.
+This project is part of the [ArteIA](https://youtube.com/@arteia) universe, driven by a community that loves art, AI, and well-crafted ideas.
 
-👉 [ko-fi.com/arteia](https://ko-fi.com/arteia) if you'd like to support the project with a coffee.
+👉 [ko-fi.com/arteia](https://ko-fi.com/arteia) if you'd like to buy me a coffee and support the project.
 
 ---
 
-🔧 Project by [ArteIA](https://youtube.com/@arteia)  
-🎨 Tools, workflows and tutorials about AI-powered art
+🔧 Project created by [ArteIA](https://youtube.com/@arteia)  
+🎨 Tools, workflows, and tutorials on AI-powered art
