@@ -71,6 +71,14 @@ Además:
 
 ---
 
+## 📸 Cómo funciona
+<div align="center">
+  <img src="./assets/screen-1-es.png" alt="Cómo funciona" width="100%">
+</div>
+
+---
+
+
 ## 🧩 Extensión Chrome
 
 Incluye una interfaz flotante sobre cualquier `textarea`.  
