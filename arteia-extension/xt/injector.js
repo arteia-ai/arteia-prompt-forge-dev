@@ -1,8 +1,8 @@
 (async () => {
-  console.log("🧠 ArteIA Forge intentando inyectarse...");
+  console.log("ArteIA Forge intentando inyectarse...");
 
   if (document.getElementById("logoArteia")) {
-    console.log("🔁 ArteIA Forge ya está activo en esta página.");
+    console.log("ArteIA Forge ya está activo en esta página.");
     return;
   }
 
@@ -147,16 +147,16 @@
       const prompt = await generatePrompt(input);
       clearInterval(loadingInterval);
 
-      if (!prompt) throw new Error("⚠️ La IA no devolvió ningún prompt.");
+      if (!prompt) throw new Error("La IA no devolvió ningún prompt.");
 
       currentTextarea.value = prompt;
       currentTextarea.focus();
-      console.log("✅ Prompt recibido:", prompt);
+      console.log("Prompt recibido:", prompt);
     } catch (err) {
       clearInterval(loadingInterval);
       currentTextarea.value = input;
       toast(err.message, "error");
-      console.warn("❌ Error en generación:", err);
+      console.warn("Error en generación:", err);
     } finally {
       currentTextarea.style.opacity = "1";
     }
@@ -179,5 +179,5 @@
     window.open("https://ko-fi.com/arteia", "_blank");
   });
 
-  console.log("✅ ArteIA Forge inyectado correctamente");
+  console.log("ArteIA Forge inyectado correctamente");
 })();
