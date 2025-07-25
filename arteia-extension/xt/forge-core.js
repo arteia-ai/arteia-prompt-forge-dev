@@ -1,12 +1,12 @@
 let lastNegative = "";
 
 export async function generatePrompt(text) {
-  // ⚠️ Replace this URL with your own Cloudflare Worker endpoint
+  // Replace this URL with your own Cloudflare Worker endpoint
   const apiURL = "YOUR_API_URL"; // Example: https://your-worker.username.workers.dev
   const apiKey = "YOUR_API_KEY"; // Optional: only if your API requires a key
 
   if (apiURL.includes("YOUR_API_URL")) {
-    throw new Error("🛠️ This extension requires your own Cloudflare Worker.\n\nPlease edit forge-core.js and replace the API URL with your own.");
+    throw new Error("This extension requires your own Cloudflare Worker.\n\nPlease edit forge-core.js and replace the API URL with your own.");
   }
 
   try {
@@ -22,7 +22,7 @@ export async function generatePrompt(text) {
 
     if (!res.ok) {
       const errMsg = await res.text();
-      throw new Error(`⛔ Error ${res.status}: ${errMsg}`);
+      throw new Error(`Error ${res.status}: ${errMsg}`);
     }
 
     const data = await res.json();
@@ -30,7 +30,7 @@ export async function generatePrompt(text) {
     return data.prompt;
 
   } catch (err) {
-    throw new Error(`💥 Error: ${err.message}`);
+    throw new Error(`Error: ${err.message}`);
   }
 }
 
