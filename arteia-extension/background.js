@@ -43,7 +43,7 @@ chrome.action.onClicked.addListener((tab) => {
   });
 });
 
-// 🛠 Restore black icon when the page reloads
+// Restore black icon when the page reloads
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status === "loading") {
     chrome.action.setIcon({
