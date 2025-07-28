@@ -8,12 +8,20 @@
 Desarrollado con Cloudflare Workers, Llama 3 y una interfaz simple para testeo rápido.  
 Este repositorio contiene el núcleo del sistema: el backend y el frontend de pruebas
 
+## ✅ ¡Extensión oficial ya disponible!
+
+🎉 Ya puedes instalar la extensión oficial directamente desde la Chrome Web Store:  
+👉 [ArteIA Prompt Forge en Chrome Store](https://chromewebstore.google.com/detail/mofdjmeahlghndjffcdmbfljimkpeame?utm_source=item-share-cb)
+
+No requiere configuración. Solo instala, haz clic y empieza a crear.
+
 ---
 
 ## ⚠️ IMPORTANTE: necesitas tu propio Worker
 
 Esta versión del proyecto **no incluye la API oficial**.  
 Para que funcione correctamente, debes desplegar tu propio Worker en Cloudflare siguiendo las instrucciones de más abajo.
+> 💡 *Esto solo aplica a la versión de desarrollo o prueba. La extensión oficial del navegador ya funciona directamente sin necesidad de configuración..*
 
 También debes configurar el archivo `xt/forge-core.js` y reemplazar:
 
