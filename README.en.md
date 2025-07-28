@@ -10,10 +10,20 @@ This repository contains the system core: the backend and the testing frontend.
 
 ---
 
+## ✅ Official Chrome Extension now available!
+
+🎉 You can now install the official extension directly from the Chrome Web Store:  
+👉 [ArteIA Prompt Forge on Chrome Store](https://chromewebstore.google.com/detail/mofdjmeahlghndjffcdmbfljimkpeame?utm_source=item-share-cb)
+
+No configuration required. Just install, click, and create!
+
+---
+
 ## ⚠️ IMPORTANT: You need your own Worker
 
 This version of the project **does not include the official API**.  
 To make it work properly, you must deploy your own Worker on Cloudflare by following the instructions below.
+> 💡 *This only applies to the developer/test version. The official browser extension already works out of the box.*
 
 You also need to configure the file `xt/forge-core.js` and replace:
 
