@@ -99,6 +99,16 @@ Solo debes:
 
 ---
 
+## 🎬 Tutorial en YouTube
+
+<p align="center">
+  <a href="https://youtu.be/MBThPasTliY" target="_blank">
+    <img src="assets/Invoke-colab-yt.jpg" alt="Ver tutorial en YouTube" style="width:80%; max-width:600px; border-radius:12px;">
+  </a>
+</p>
+
+---
+
 ## ☕ Créditos y apoyo
 
 Este proyecto forma parte del universo de [ArteIA](https://youtube.com/@arteia), impulsado por una comunidad que ama el arte, la IA y las ideas bien hechas.
