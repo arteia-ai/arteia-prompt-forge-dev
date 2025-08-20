@@ -100,6 +100,16 @@ You just need to:
 
 ---
 
+## 🎬 YouTube Tutorial
+
+<p align="center">
+  <a href="https://youtu.be/MBThPasTliY" target="_blank">
+    <img src="assets/Miniatura-05-apf.jpg" alt="YouTube tutorial" style="width:80%; max-width:600px; border-radius:12px;">
+  </a>
+</p>
+
+---
+
 ## ☕ Credits & Support
 
 This project is part of the [ArteIA](https://youtube.com/@arteia) universe, driven by a community that loves art, AI, and well-crafted ideas.
