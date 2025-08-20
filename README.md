@@ -103,7 +103,7 @@ Solo debes:
 
 <p align="center">
   <a href="https://youtu.be/MBThPasTliY" target="_blank">
-    <img src="assets/Invoke-colab-yt.jpg" alt="Ver tutorial en YouTube" style="width:80%; max-width:600px; border-radius:12px;">
+    <img src="assets/Miniatura-05-apf.jpg" alt="Ver tutorial en YouTube" style="width:80%; max-width:600px; border-radius:12px;">
   </a>
 </p>
 
